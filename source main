@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Pegawaimain {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // Input data pegawai
+        System.out.print("Masukkan nama : ");
+        String nama = input.nextLine();
+        System.out.print("Masukkan jabatan : ");
+        String jabatan = input.nextLine();
+        System.out.print("Masukkan tunjangan yang didapat : ");
+        double tunjangan = input.nextDouble();
+        System.out.print("Masukkan potongan yang didapat : ");
+        double potongan = input.nextDouble();
+        System.out.print("Masukkan bonus yang didapat : ");
+        double bonus = input.nextDouble();
+
+        // Membuat objek pegawai
+        Pegawai pegawai = new Pegawai(nama, jabatan, tunjangan, potongan, bonus);
+        pegawai.pegawaiInfo();
+
+        System.out.print("Masukkan tambahan bonus yang didapat : ");
+        double tambahanBonus = input.nextDouble();
+        pegawai.tambahanBonus(tambahanBonus);
+
+        pegawai.pegawaiInfo();
+
+    }
+}
